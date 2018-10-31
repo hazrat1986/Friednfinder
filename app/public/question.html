@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Find a friend by answering some simple questions">
+	<meta name="author" content="Fred Lintz">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Friend Finder - Question</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+	<div class="modal fade" id="myModal">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">And your best match is...</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <p id='friendName'></p>
+	        <img id='friendImg' src="" height='200'>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="container">
+		<h1>Questions</h1>	
+		<hr>
+		<h3>Tell Me About Yourself</h3>
+		<div class="form-group">
+			<label for="Name">Full Name (Required)</label>
+			<input type="text" class='form-control' id='name' placeholder="Hazrat">
+		</div>
+		<div class="form-group">
+			<label for="image">Link to your image (Required)</label>
+			<input type="text" class='form-control' id='image' placeholder="https://lh3.googleusercontent.com/-m4b4galty3g/VqOxk9WMiSE/AAAAAAAAACU/puQzfMnjZ04pCiSCYoRBeLGpXIKwfnh8gCEwYCg/w326-h220-p/YouTubeChannelArt">
+		</div>
+		<hr>
+		<h3>Question 1</h3>
+		<h4>You can close your eyes to the things you don’t want to see, but you can’t close your heart to the things you don’t want to feel.</h4>
+		<div class="form-group">
+			<select name="quest1" id="quest1">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<h3>Question 2</h3>
+		<h4>I'm not the kind of person who tries to be cool or trendy, I'm definitely an individual.</h4>
+		<div class="form-group">
+			<select name="quest2" id="quest2">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<h3>Question 3</h3>
+		<h4>Learning how to be still, to really be still and let life happen - that stillness becomes a radiance.</h4>
+		<div class="form-group">
+			<select name="quest3" id="quest3">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<h3>Question 4</h3>
+		<h4>I don't want a Black History Month. Black history is American history.</h4>
+		<div class="form-group">
+			<select name="quest4" id="quest4">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<h3>Question 5</h3>
+		<h4>The magic doesn't come from within the director's mind, it comes from within the hearts of the actors.</h4>
+		<div class="form-group">
+			<select name="quest5" id="quest5">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<h3>Question 6</h3>
+		<h4>When you stand for something, you've got to stand for it all the way, not half way.</h4>
+		<div class="form-group">
+			<select name="quest5" id="quest5">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<h3>Question 7</h3>
+		<h4>Being married means I can break wind and eat ice cream in bed.</h4>
+		<div class="form-group">
+			<select name="quest5" id="quest5">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<h3>Question 8</h3>
+		<h4>If you haven't turned rebel by twenty you've got no heart; if you haven't turned establishment by thirty you've got no brains!</h4>
+		<div class="form-group">
+			<select name="quest5" id="quest5">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<h3>Question 9</h3>
+		<h4>Success isn't always about greatness. It's about consistency. Consistent hard work leads to success. Greatness will come.</h4>
+		<div class="form-group">
+			<select name="quest5" id="quest5">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<h3>Question 10</h3>
+		<h4>SEverybody thinks making films back to back is a big deal but they did it all the time in the old days.</h4>
+		<div class="form-group">
+			<select name="quest5" id="quest5">
+				<option value="">Select an Option</option>
+				<option value="1">1 (Strongly Disagree)</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5 (Strongly Agree)</option>
+			</select>
+		</div>
+		<div class="btn btn-primary btn-block" id="submit"><h4> Find a friend</h4></div>
+		<hr>
+		
+		<br>
+	</div>
+	
+	<script src='main.js'></script>
+</body>
+</html>
+
+
+
+
+
+
+

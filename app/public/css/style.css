@@ -1,0 +1,11 @@
+body {
+    width: 90%;
+   margin: 0px auto; 
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   background-color:rgb(121, 169, 190);
+}
+.jumbotron{
+    background-color:rgb(120, 155, 146);
+}
